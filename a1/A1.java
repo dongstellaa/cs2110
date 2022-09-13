@@ -1,7 +1,7 @@
 /** Please provide the following information
  * Name(s): Stella Dong
  * NetID(s): ssd74
- * Tell us what you thought about the assignment: nice
+ * Tell us what you thought about the assignment:
  */
 
 /** The goal of this assignment is to familiarize yourself with Java and start
@@ -23,7 +23,7 @@ public class A1 {
      *  Example: for 1 hour and 30 min, write that timeSpent = 1.5
      *  Example: for 1 hour, write that timeSpent = 1 or timeSpent = 1.0
      */
-    public static double timeSpent = 2.5;
+    public static double timeSpent = 1.0;
 
     /** Return the product of the values: 7, 11, and 13. */
     public static int product() {
@@ -33,20 +33,18 @@ public class A1 {
     /** In the following order: double x, add 4, divide it by 2, and then
      *  subtract the original x value from the result. */
     public static int theAnsweris2(int x){
-        return ((((x*2)+4)/2)-x);
+        return (((2*x)+4)/2)-4;
     }
 
     /** If x is not a three-digit number, return -1;
      * Otherwise return the product of x and the values: 7, 11, and 13.
      */
     public static int magicTrick(int x) {
-        int testx = x%100;
-        int testx2 = Math.abs(x/100);
-        if (testx == x || testx2 >= 10) {
-            return -1;
+        if (x < 100) {
+            return -1
         }
         else {
-            return x*7*11*13;
+            return x*11*13;
         }
     }
 
@@ -75,23 +73,15 @@ public class A1 {
      *  Requires: a and b must be positive values.
      */
     public static double hypotenuse(double a, double b) {
-        return Math.sqrt(a*a + b*b);
+        return (Math.sqrt(a*a + b*b));
     }
 
     /** Given three triangle side lengths a, b, and c, determine if the triangle can exist.
      */
     public static boolean isTriangle(double a, double b, double c) {
-        if (a >= (b+c)){
-            return false;
-        }
-        if (b >= (c+a)){
-            return false;
-        }
-        if (c >= (a+b)){
-            return false;
-        }
-        return true;
+        longest_side = 0;
 
+        return true;
     }
 
     /** Given four operations: ADD, SUBTRACT, MULTIPLY, and DIVIDE and two inputs x and y,
@@ -99,71 +89,31 @@ public class A1 {
      *  Requires: opp = DIVIDE and y = 0 cannot be true at the same time.
      */
     public static int calculate(String opp, int x, int y) {
-        if (opp.equals("ADD")){
-            return x+y;
-        }
-        if (opp.equals("SUBTRACT")){
-            return x-y;
-        }
-        if (opp.equals("MULTIPLY")){
-            return x*y;
-        }
-        return (int) x / y;
-
+        return 0;
     }
 
     /** Return the sum of the values in n to m inclusive.
      */
     public static int rangeSum(int n, int m) {
-        int sum = 0;
-        for (int i = n; i <= m; i++){
-            sum += i;
-        }
-        return sum;
+        return 0;
     }
 
     /** Return the sum of the odd values in n to m inclusive.
      */
     public static int rangeSumOdd(int n, int m) {
-        int sum = 0;
-        int i = n;
-        if (n%2==0){
-            i = n+1;
-        }
-        while (i<=m) {
-            sum += i;
-            i += 2;
-        }
-        return sum;
+        return 0;
     }
 
     /** Return whether str is a palindrome.
      */
     public static boolean isPalindrome(String str) {
-        String reverseString = "";
-        for (int i = str.length()-1; i >= 0; i--){
-            reverseString += str.charAt(i);
-        }
-        if (str.equals(reverseString)) {
-            return true;
-        }
-        return false;
+        return true;
     }
 
     /** Return a String that return a string that contains the
      *  same characters as str, but with each vowel duplicated.
      */
     public static String duplicateVowels(String str) {
-        String duplStr = "";
-        char letter = str.charAt(0);
-        String vowels = "aeiou";
-        for (int i = 0; i < str.length(); i++){
-            letter = str.charAt(i);
-            duplStr = duplStr + letter;
-            if (vowels.indexOf(letter) >= 0) {
-                duplStr = duplStr + letter;
-            }
-        }
-        return duplStr;
+        return "";
     }
 }
